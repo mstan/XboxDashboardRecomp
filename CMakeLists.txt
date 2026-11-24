@@ -21,4 +21,5 @@ target_link_libraries(XboxDashboard PRIVATE dashboard_image SDL2::SDL2-static sh
 target_link_options(XboxDashboard PRIVATE $<$<CXX_COMPILER_ID:GNU>:-municode;-static>)
 set(RECOMP_UI_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/recomp-ui")
 include("${RECOMP_UI_ROOT}/recomp_ui.cmake")
-recomp_target_launcher_ui(XboxDashboard CONSOLE all)
+recomp_target_launcher_ui(XboxDashboard CONSOLE cdi
+    PAD "${CMAKE_CURRENT_SOURCE_DIR}/assets/pad_xbox.jpg")

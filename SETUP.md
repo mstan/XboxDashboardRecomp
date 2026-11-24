@@ -10,7 +10,7 @@ Dashboard 5960 on its C partition. Play imports the Dashboard into a local
 cache and opens the original Dashboard in the native runtime. The HDD image
 is opened read-only. Local console settings and saves live under `runtime/data`.
 
-The Windows player uses the native runtime from the [XboxLLR Dashboard release](https://github.com/mstan/xboxllr/releases/tag/beta-2026.11.01.1).
+The Windows player uses the xboxllr HLE runtime with the original Dashboard integrity table. The support files and exact runtime revision come from the [XboxLLR Dashboard release](https://github.com/mstan/xboxllr/releases/tag/beta-2026.11.01.1).
 
 ## Build
 
@@ -29,5 +29,6 @@ The existing package records both its runtime source revision and its packaging 
 
 To build the release's front end, configure this repository with CMake
 using MinGW and SDL2. Build the `XboxDashboard` target in Release mode.
-`tools/package.py` combines that build with the exact runtime archive in
-`release-baseline.json`.
+`tools/package.py` combines the launcher and a stock HLE Dashboard runtime
+with the support archive identified in `release-baseline.json`. Leave the
+native title and section mod source options empty when building the runtime.

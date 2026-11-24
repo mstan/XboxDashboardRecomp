@@ -129,6 +129,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, PWSTR, int) {
         };
         game.name = "Xbox Dashboard";
         game.platform = "XBOX";
+        game.num_players = 1;
         game.rom_noun = "Xbox HDD image";
         game.rom_filter_desc = "Xbox HDD image";
         game.rom_patterns = patterns;
