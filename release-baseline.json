@@ -1,0 +1,11 @@
+{
+  "upstream": "mstan/xboxllr",
+  "tag": "beta-2026.11.01.1",
+  "packaging_revision": "8d7452bb0d671e654dfc2f7f5f3564a0c9336d2d",
+  "runtime_revision": "f27457f57ce24617838c322da91bcd6fd13035ad",
+  "assets": {
+    "XboxDashboard-windows-x64-2026.11.01.1.zip": "d736513059d8aa902bbf384f2c7d2ecbb257e7b0e8f61cd44adb7603e8a746ed",
+    "XboxDashboard-source-2026.11.01.1.zip": "1c4ffaabac2d77b68666aacb7dc3a4ef24c06f9bb4c24c43b067f952fdc6c16a",
+    "xboxllr-native-dependency-source-2026.11.01.1.zip": "c0eeeeec66fc975eab66c5fb23f44d798edea2a8dae167dd172e4bb039b2723a"
+  }
+}

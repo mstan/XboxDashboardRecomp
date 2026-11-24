@@ -1,0 +1,13 @@
+/local/
+/build/
+/dist/
+__pycache__/
+*.xbe
+*.xip
+*.iso
+*.img
+*.qcow2
+*.bin
+*.exe
+*.dll
+*.zip
