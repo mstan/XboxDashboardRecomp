@@ -2,9 +2,15 @@
 
 Standalone consumer for the original Xbox Dashboard 5960. This repo owns the Dashboard definition, title recovery inputs and release channel. The shared native runtime and tooling are supplied by the pinned [xboxllr](https://github.com/mstan/xboxllr) submodule.
 
-## Windows beta
+## Windows
 
-The archived November 1 Windows x64 beta is the already qualified native player from the [XboxLLR Dashboard release](https://github.com/mstan/xboxllr/releases/tag/beta-2026.11.01.1). This historical package expects a Dashboard 5960 content installation. A whole HDD image import is still needed for a new player release. See the [feature coverage](xboxllr/docs/DASHBOARD.md) for the archived runtime.
+Extract the Windows x64 release and run `XboxDashboard.exe`. Choose a raw
+Xbox HDD image (`.img` or `.bin`) or a `.qcow2` image with the original
+Dashboard 5960 on its C partition. Play imports the Dashboard into a local
+cache and opens the original Dashboard in the native runtime. The HDD image
+is opened read-only. Local console settings and saves live under `runtime/data`.
+
+The Windows player uses the native runtime from the [XboxLLR Dashboard release](https://github.com/mstan/xboxllr/releases/tag/beta-2026.11.01.1).
 
 ## Build
 
@@ -20,3 +26,8 @@ python tools/dashboard.py build @opts
 ```
 
 The existing package records both its runtime source revision and its packaging revision in `BUILD-PROVENANCE.json`. The player and its corresponding source remain linked to those revisions.
+
+To build the release's front end, configure this repository with CMake
+using MinGW and SDL2. Build the `XboxDashboard` target in Release mode.
+`tools/package.py` combines that build with the exact runtime archive in
+`release-baseline.json`.

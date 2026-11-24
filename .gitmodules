@@ -1,3 +1,6 @@
 [submodule "xboxllr"]
 	path = xboxllr
 	url = https://github.com/mstan/xboxllr.git
+[submodule "recomp-ui"]
+	path = recomp-ui
+	url = https://github.com/RetroPortingToolKit/recomp-ui.git
