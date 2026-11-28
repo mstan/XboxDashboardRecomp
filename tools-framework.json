@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/mstan/xboxllr",
+  "directory": "xboxllr-tools",
+  "revision": "01eb6d9bbb704d2a528d3748eaa939e9efc273b3",
+  "scope": "Release composition tools; frontend storage and runtime source pins remain separate"
+}
